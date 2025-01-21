@@ -45,8 +45,10 @@ export default function Page() {
           , published{" "}
           <Link href="https://scholar.google.com/citations?user=9SLlqYkAAAAJ&hl=en" className="font-medium hover:text-primary">
             ML research
-          </Link>, and got involved {" "}
-          <Link href="https://www.tcv.com/" className="font-medium hover:text-primary">
+          </Link>, and got <Link href="https://www.tcv.com/" className="font-medium hover:text-primary">
+            involved
+          </Link>{" "}
+          <Link href="https://academy.unusual.vc/" className="font-medium hover:text-primary">
             with
           </Link>{" "} <Link href="https://www.loom.com/share/447352ad1e5a4b7aba343abff16d4991?sid=09591bc5-7af6-402e-97f0-37490d7d9f17" className="font-medium hover:text-primary">
             startups

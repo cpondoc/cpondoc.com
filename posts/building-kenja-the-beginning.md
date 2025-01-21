@@ -1,5 +1,5 @@
 ---
-title: "Building Kenja: The Beginning"
+title: "Building Kenja: Navigating the Idea Maze"
 date: "2024-08-18"
 excerpt: "How me and a couple of friends started a software project."
 ---
