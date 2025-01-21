@@ -1,27 +1,30 @@
 import { NextResponse } from "next/server"
-import RSS from "rss"
+import { getAllPosts } from "@/lib/mdUtils"
 
 export async function GET() {
-  const feed = new RSS({
-    title: "Your Blog Title",
-    description: "Your blog description",
-    feed_url: "https://yourdomain.com/rss.xml",
-    site_url: "https://yourdomain.com",
-  })
+  const posts = getAllPosts()
+  const feed = `<?xml version="1.0" encoding="UTF-8"?>
+  <rss version="2.0">
+    <channel>
+      <title>Your Blog Title</title>
+      <link>https://yourdomain.com</link>
+      <description>Your blog description</description>
+      ${posts
+        .map(
+          (post) => `
+        <item>
+          <title>${post.title}</title>
+          <link>https://yourdomain.com/writing/${post.slug}</link>
+          <pubDate>${new Date(post.date).toUTCString()}</pubDate>
+          <description>${post.excerpt}</description>
+        </item>
+      `,
+        )
+        .join("")}
+    </channel>
+  </rss>`
 
-  // Add your blog posts to the feed
-  feed.item({
-    title: "The Future of Creative Tools",
-    description: "Exploring how AI and new interfaces will transform creative work",
-    url: "https://yourdomain.com/writing/future-of-creative-tools",
-    date: "May 18, 2024",
-  })
-
-  // Add more items as needed
-
-  const rss = feed.xml({ indent: true })
-
-  return new NextResponse(rss, {
+  return new NextResponse(feed, {
     headers: {
       "Content-Type": "application/xml",
     },
