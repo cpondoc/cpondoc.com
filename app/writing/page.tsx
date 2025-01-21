@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { getAllPosts } from "@/lib/mdUtils"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 export default function WritingPage() {
   const posts = getAllPosts()
@@ -21,7 +22,6 @@ export default function WritingPage() {
       </header>
 
       <section className="mb-16">
-        <h2 className="text-3xl font-bold mb-8">Writing</h2>
         <div className="space-y-8">
           {posts.map((post) => (
             <Link key={post.slug} href={`/writing/${post.slug}`} className="block group">
@@ -36,7 +36,20 @@ export default function WritingPage() {
       </section>
 
       <footer className="flex items-center justify-between pt-8 border-t">
-        <div className="font-medium">Chris Pondoc</div>
+        <div className="flex gap-4">
+          <Link href="https://github.com/cpondoc" className="text-muted-foreground hover:text-foreground">
+            <Github className="w-5 h-5" />
+            <span className="sr-only">GitHub</span>
+          </Link>
+          <Link href="https://linkedin.com/in/pondoc" className="text-muted-foreground hover:text-foreground">
+            <Linkedin className="w-5 h-5" />
+            <span className="sr-only">LinkedIn</span>
+          </Link>
+          <Link href="mailto:clpondoc@stanford.edu" className="text-muted-foreground hover:text-foreground">
+            <Mail className="w-5 h-5" />
+            <span className="sr-only">Email</span>
+          </Link>
+        </div>
       </footer>
     </div>
   )
