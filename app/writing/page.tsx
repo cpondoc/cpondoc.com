@@ -1,6 +1,11 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { getAllPosts } from "@/lib/mdUtils"
 import { Github, Linkedin, Mail } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Writing",
+}
 
 export default function WritingPage() {
   const posts = getAllPosts()

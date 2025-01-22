@@ -1,5 +1,10 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Github, Linkedin, Mail } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Chris Pondoc",
+}
 
 export default function Page() {
   return (
