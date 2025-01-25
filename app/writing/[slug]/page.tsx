@@ -1,6 +1,12 @@
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { getPostData, getAllPostSlugs } from "@/lib/mdUtils"
+import type { Metadata } from "next"
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const post = getPostData(params.slug)
+  return { title: post.title }
+}
 
 export async function generateStaticParams() {
   const slugs = getAllPostSlugs()
