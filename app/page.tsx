@@ -22,13 +22,18 @@ export default function Page() {
       {/* Introduction */}
       <section className="prose prose-slate max-w-none mb-16 space-y-4">
         <p className="text-lg leading-relaxed">
-          I'm a master's student at Stanford studying computer science. Currently, I'm working on
-          information retrieval research alongside of{" "}
+          I'm a master's student at Stanford studying computer science. Currently, I'm working on {" "}
           <Link
             href="https://douwekiela.github.io/"
             className="font-medium hover:text-primary"
           >
-            Douwe Kiela
+            information retrieval research
+          </Link>{" "} and helping software projects in
+          {" "} <Link
+            href="https://stanford.edu/class/cs210/index.html"
+            className="font-medium hover:text-primary"
+          >
+            CS 210
           </Link>
           .
         </p>
