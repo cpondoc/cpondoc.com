@@ -12,7 +12,7 @@ export default function Page() {
       {/* Header */}
       <header className="mb-16 space-y-4">
         <div>
-          <h1 className="text-2xl font-medium">Chris Pondoc</h1>
+          <h1 className="text-2xl font-medium">Christopher Pondoc</h1>
         </div>
         <nav className="flex gap-6">
           <Link href="/" className="text-foreground font-medium">
@@ -27,24 +27,7 @@ export default function Page() {
       {/* Introduction */}
       <section className="prose prose-slate max-w-none mb-16 space-y-4">
         <p className="text-lg leading-relaxed">
-          I'm a master's student at Stanford studying computer science. Currently, I'm working on {" "}
-          <Link
-            href="https://douwekiela.github.io/"
-            className="font-medium hover:text-primary"
-          >
-            information retrieval research
-          </Link>{" "} and helping software projects in
-          {" "} <Link
-            href="https://stanford.edu/class/cs210/index.html"
-            className="font-medium hover:text-primary"
-          >
-            CS 210
-          </Link>
-          .
-        </p>
-
-        <p className="text-lg leading-relaxed">
-          I also did my undergrad at Stanford, also in computer science. During that time, I did engineering at{" "}
+          I recently graduated from Stanford with my bachelor's and master's in computer science. During that time, I did engineering at{" "}
           <Link href="https://www.splunk.com/" className="font-medium hover:text-primary">
             Splunk
           </Link>{" "}
@@ -60,10 +43,11 @@ export default function Page() {
           </Link>{" "}
           <Link href="https://academy.unusual.vc/" className="font-medium hover:text-primary">
             with
-          </Link>{" "} <Link href="https://www.loom.com/share/447352ad1e5a4b7aba343abff16d4991?sid=09591bc5-7af6-402e-97f0-37490d7d9f17" className="font-medium hover:text-primary">
+          </Link>{" "} <Link href="https://stanford.edu/class/cs210/index.html" className="font-medium hover:text-primary">
             startups
           </Link>.
         </p>
+
       </section>
 
       {/* Footer */}

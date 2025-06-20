@@ -6,10 +6,10 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Chris Pondoc",
-    template: "%s | Chris Pondoc",
+    default: "Christopher Pondoc",
+    template: "%s | Christopher Pondoc",
   },
-  description: "Personal website and blog of Chris Pondoc",
+  description: "Personal website and blog of Christopher Pondoc",
   icons: {
     icon: [{ url: "/favicon.ico" }],
   },
