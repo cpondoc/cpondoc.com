@@ -61,7 +61,7 @@ export default function Page() {
             <Linkedin className="w-5 h-5" />
             <span className="sr-only">LinkedIn</span>
           </Link>
-          <Link href="mailto:clpondoc@stanford.edu" className="text-muted-foreground hover:text-foreground">
+          <Link href="mailto:clpondoc@cs.stanford.edu" className="text-muted-foreground hover:text-foreground">
             <Mail className="w-5 h-5" />
             <span className="sr-only">Email</span>
           </Link>
