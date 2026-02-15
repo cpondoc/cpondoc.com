@@ -112,23 +112,49 @@ npm run start
 
 ## Deployment
 
-This Next.js application can be deployed on various platforms:
+### Automated Deployment (GitHub Actions → Railway)
 
-- **[Vercel](https://vercel.com/)** (recommended) - Zero configuration deployment
+This project is configured with GitHub Actions to automatically deploy to Railway on every push to the `main` branch.
+
+**Setup Instructions:**
+
+1. Get your Railway token:
+   ```bash
+   railway login
+   railway whoami --token
+   ```
+
+2. Add the token to GitHub Secrets:
+   - Go to your repository **Settings** → **Secrets and variables** → **Actions**
+   - Create a new secret named `RAILWAY_TOKEN`
+   - Paste your Railway token
+
+3. Push to `main` branch - the workflow will automatically deploy!
+
+For more details, see [`.github/workflows/README.md`](.github/workflows/README.md)
+
+### Manual Railway Deployment
+
+```bash
+# Install Railway CLI
+npm i -g @railway/cli
+
+# Login
+railway login
+
+# Deploy
+railway up
+```
+
+### Other Platforms
+
+This Next.js application can also be deployed on:
+
+- **[Vercel](https://vercel.com/)** - Zero configuration deployment
 - **[Netlify](https://www.netlify.com/)**
 - **[AWS](https://aws.amazon.com/)**
 - **[Google Cloud](https://cloud.google.com/)**
 - Any platform that supports Node.js
-
-For Vercel deployment:
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-```
 
 ## Learn More
 
