@@ -1,7 +1,10 @@
 import Link from "next/link"
 import { Github, Linkedin, Mail } from "lucide-react"
+import { getPageContent } from "@/lib/mdUtils"
 
 export default function Home() {
+  const homeContent = getPageContent("home")
+
   return (
     <div className="min-h-screen max-w-3xl mx-auto px-6 py-8">
       {/* Header */}
@@ -21,28 +24,10 @@ export default function Home() {
 
       {/* Introduction */}
       <section className="prose prose-slate max-w-none mb-16 space-y-4">
-        <p className="text-lg leading-relaxed">
-          I recently graduated from Stanford with my bachelor&apos;s and master&apos;s in computer science. During that time, I did engineering at{" "}
-          <Link href="https://www.splunk.com/" className="font-medium hover:text-primary">
-            Splunk
-          </Link>{" "}
-          and{" "}
-          <Link href="https://www.coinbase.com/" className="font-medium hover:text-primary">
-            Coinbase
-          </Link>
-          , published{" "}
-          <Link href="https://scholar.google.com/citations?user=9SLlqYkAAAAJ&hl=en" className="font-medium hover:text-primary">
-            ML research
-          </Link>, and got <Link href="https://www.tcv.com/" className="font-medium hover:text-primary">
-            involved
-          </Link>{" "}
-          <Link href="https://academy.unusual.vc/" className="font-medium hover:text-primary">
-            with
-          </Link>{" "} <Link href="https://stanford.edu/class/cs210/index.html" className="font-medium hover:text-primary">
-            startups
-          </Link>.
-        </p>
-
+        <div 
+          className="text-lg leading-relaxed [&_a]:font-medium [&_a]:hover:text-primary"
+          dangerouslySetInnerHTML={{ __html: homeContent.content }}
+        />
       </section>
 
       {/* Footer */}

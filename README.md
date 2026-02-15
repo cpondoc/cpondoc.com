@@ -70,6 +70,7 @@ cpondoc.com/
 │   └── page.tsx         # Home page
 ├── components/          # React components
 │   └── ui/              # shadcn/ui components
+├── content/             # Static page content (Markdown)
 ├── hooks/               # Custom React hooks
 ├── lib/                 # Utility functions
 ├── posts/               # Markdown blog posts
@@ -77,6 +78,30 @@ cpondoc.com/
 ├── styles/              # Global styles
 └── package.json         # Project dependencies
 ```
+
+## Editing Page Content
+
+The home page bio and other static content are stored as Markdown files in the `content/` directory.
+
+### Updating Your Bio
+
+Edit `content/home.md`:
+
+```markdown
+---
+title: Your Name
+description: Site description
+---
+
+Your bio content with [markdown links](https://example.com).
+```
+
+The content supports:
+- Standard markdown syntax
+- Links with automatic styling
+- Frontmatter for metadata
+
+Changes take effect after rebuilding the site (`npm run build`).
 
 ## Adding Blog Posts
 
