@@ -22,7 +22,7 @@ export default function Home() {
       {/* Introduction */}
       <section className="prose prose-slate max-w-none mb-16 space-y-4">
         <p className="text-lg leading-relaxed">
-          I recently graduated from Stanford with my bachelor's and master's in computer science. During that time, I did engineering at{" "}
+          I recently graduated from Stanford with my bachelor&apos;s and master&apos;s in computer science. During that time, I did engineering at{" "}
           <Link href="https://www.splunk.com/" className="font-medium hover:text-primary">
             Splunk
           </Link>{" "}
